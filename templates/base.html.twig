@@ -15,6 +15,7 @@
         {% endblock %}
     </head>
     <body>
+	<main>
         <header>
             <ul class="menu">
                 <a href="{{ path("app_index") }}"><li>Inicio</li></a>
@@ -30,9 +31,9 @@
                     <a href="{{path("app_login")}}" class="menu_login"><i class="icofont-login"></i></a>
                 {% endif %}
         </header>
-		<main>
+		
         {% block body %}{% endblock %}
-		</main>
+		
         <footer>
             <h4>
                 Contacta con nosotros por las siguientes redes sociales: 
@@ -46,5 +47,6 @@
                 <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Licencia de Creative Commons">
             </a>
         </footer>
+	</main>
     </body>
 </html>
