@@ -1,12 +1,8 @@
-
-
-
 @import url('../icofont/icofont.min.css');
 @font-face {
     font-family: fuente1;
     src: url(../../assets/Fuentes/AlteHaasGroteskRegular.ttf);
   }
-
 
 *{
     margin: 0px;
@@ -306,7 +302,6 @@ header .menu li{
 .Competencias{
     grid-area:Competencias;
 }
-<<<<<<< Updated upstream
 
 .grid-ficha{
     
@@ -752,8 +747,7 @@ footer h4{
     margin-bottom: 2.5em;
     
     display:grid;
-    grid-template-areas:
-                        "L1 DC DC L2"
+    grid-template-areas:"L1 DC DC L2"
                         "L1 TP RC L2"
                         "L1 SU SU L2";
                         
