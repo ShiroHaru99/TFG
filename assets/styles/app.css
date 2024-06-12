@@ -737,7 +737,11 @@ footer h4{
 
 .tituloApp{
     padding:2rem;
-    font-size: 100px;
+    font-size: 4em;
+}
+.tituloApp2{
+    padding:2rem;
+    font-size: 2em;
 }
 
 .grid-body{
