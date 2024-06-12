@@ -901,16 +901,10 @@ return $this->redirectToRoute('app_revisiones_trasfondo');
 #[Route('/solicitud_dote', name: 'app_solicitud_dote')]
     public function Solicitudes_Dotes( Request $request):Response
 	{
-       
-        
         $dote=new Dotes();
        
-		$form = $this->createForm(DotesType2::Class,$dote);
-        
-            
-		$form->handleRequest($request);
-       
-       
+		$form = $this->createForm(DotesType2::Class,$dote);            
+		$form->handleRequest($request);       
         
         if ($form->isSubmitted() && $form->isValid()) {
             $dotes = $form->getData();
@@ -924,8 +918,8 @@ return $this->redirectToRoute('app_revisiones_trasfondo');
 
             $dotes->setValidado(false);
             $sesion = $request->getSession();
-            $sesion->set('dotes', $dotes);
-            //$this->entityManager->persist($dotes);
+            //$sesion->set('dotes', $dotes);
+            $this->entityManager->persist($dotes);
             $this->entityManager->flush();
             return $this->redirectToRoute('app_solicitud_ok');
         }
